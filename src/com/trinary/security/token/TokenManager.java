@@ -5,7 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.trinary.security.entities.User;
 import com.trinary.security.exceptions.TokenExpiredException;
 import com.trinary.security.exceptions.TokenInvalidException;
+import org.springframework.stereotype.Component;
 
+@Component
 public abstract class TokenManager {
 	@Autowired
 	protected TokenFactory tokenFactory;

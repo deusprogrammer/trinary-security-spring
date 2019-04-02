@@ -9,9 +9,17 @@ import com.trinary.security.exceptions.TokenExpiredException;
 import com.trinary.security.exceptions.TokenInvalidException;
 import com.trinary.security.token.Token;
 import com.trinary.security.token.TokenManager;
+import org.springframework.stereotype.Component;
 
+@Component
 public class TokenAuthenticationProvider implements AuthenticationProvider {
 	@Autowired TokenManager tokenManager;
+
+	public TokenAuthenticationProvider() {}
+
+	public TokenAuthenticationProvider(TokenManager tokenManager) {
+		this.tokenManager = tokenManager;
+	}
 	
 	@Override
 	public Authentication authenticate(Authentication auth)

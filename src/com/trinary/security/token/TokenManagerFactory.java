@@ -9,8 +9,4 @@ public class TokenManagerFactory {
 		}
 		return tokenManager;
 	}
-	
-	public static void setTokenManager(TokenManager tokenManager) {
-		
-	}
 }

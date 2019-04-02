@@ -4,7 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.trinary.security.entities.User;
+import org.springframework.stereotype.Component;
 
+@Component
 public class MemoryResidentTokenManager extends TokenManager {
 	protected static Map<String, Token> tokenMap = new HashMap<String, Token>();
 	protected static Map<String, Token> userMap  = new HashMap<String, Token>();

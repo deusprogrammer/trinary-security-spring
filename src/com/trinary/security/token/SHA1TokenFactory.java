@@ -8,7 +8,9 @@ import java.util.UUID;
 
 import com.trinary.security.entities.User;
 import com.trinary.security.utils.TimeUtils;
+import org.springframework.stereotype.Component;
 
+@Component
 public class SHA1TokenFactory extends TokenFactory {
 
 	@Override
